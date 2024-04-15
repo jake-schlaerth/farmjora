@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv0fa3o0abfjj"]
+
+[ext_resource type="PackedScene" uid="uid://xovvjld3goeu" path="res://scenes/maps/dialog_areas/dialog_area.tscn" id="1_silo4"]
+
+[node name="Sign2" instance=ExtResource("1_silo4")]
+dialog_key = "sign_2"

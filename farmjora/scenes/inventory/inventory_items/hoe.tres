@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dyn1qjsc312yq"]
+
+[ext_resource type="Script" path="res://scenes/inventory/inventory_items/inventory_item.gd" id="1_qrltp"]
+[ext_resource type="Texture2D" uid="uid://crsrpw6vu7emj" path="res://assets/sprites/ui/inventory/items/hoe.png" id="2_l8nuq"]
+
+[resource]
+script = ExtResource("1_qrltp")
+name = "hoe"
+texture = ExtResource("2_l8nuq")
+equipable = true

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7hfjudhkvxib"]
+
+[ext_resource type="PackedScene" uid="uid://bpw5s24eu5xi0" path="res://scenes/maps/farm/farmable_area.tscn" id="1_1g46k"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_80ew3"]
+scenes/1/scene = ExtResource("1_1g46k")
+
+[sub_resource type="TileSet" id="TileSet_2mqn1"]
+tile_size = Vector2i(4, 4)
+sources/0 = SubResource("TileSetScenesCollectionSource_80ew3")
+
+[node name="Farm" type="TileMap"]
+tile_set = SubResource("TileSet_2mqn1")
+format = 2

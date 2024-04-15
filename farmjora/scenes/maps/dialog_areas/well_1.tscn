@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnq7n13jhdkqi"]
+
+[ext_resource type="PackedScene" uid="uid://xovvjld3goeu" path="res://scenes/maps/dialog_areas/dialog_area.tscn" id="1_cnax7"]
+
+[node name="DialogArea" instance=ExtResource("1_cnax7")]
+dialog_key = "well_1"

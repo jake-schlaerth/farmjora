@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://btwsmtup2cjoq"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_g0ybv"]
+[ext_resource type="PackedScene" uid="uid://c5swxwyedgbqu" path="res://scenes/ui/hud/hud.tscn" id="4_d8cai"]
+[ext_resource type="AudioStream" uid="uid://vxuk860nemfw" path="res://assets/sounds/music/sixths_on_top.ogg" id="5_hfqde"]
+[ext_resource type="PackedScene" uid="uid://bn283rlr3v6l0" path="res://scenes/ui/dialog_player/dialog_player.tscn" id="6_rext3"]
+[ext_resource type="PackedScene" uid="uid://bqub6adea8qv0" path="res://scenes/ui/animations/transitions.tscn" id="8_2vf1h"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_g0ybv")
+
+[node name="MapContainer" type="Node2D" parent="."]
+process_mode = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transitions" parent="CanvasLayer" instance=ExtResource("8_2vf1h")]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("4_d8cai")]
+
+[node name="DialogPlayer" parent="." instance=ExtResource("6_rext3")]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("5_hfqde")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtolqfgdxtw1t"]
+
+[ext_resource type="Script" path="res://scenes/maps/stuff/map_transition.gd" id="1_rxncw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5upcp"]
+size = Vector2(16, 16)
+
+[node name="MapTransition" type="Area2D"]
+script = ExtResource("1_rxncw")
+new_map = "res://scenes/maps/dirt_1.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5upcp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://btwsmtup2cjoq"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_g0ybv"]
+[ext_resource type="PackedScene" uid="uid://b7hfjudhkvxib" path="res://scenes/maps/farm/farm.tscn" id="2_hcv60"]
+[ext_resource type="PackedScene" uid="uid://0qxs05o5r304" path="res://scenes/maps/small_world.tscn" id="2_jukr8"]
+[ext_resource type="PackedScene" uid="uid://crc0a6w021fcv" path="res://scenes/player/player.tscn" id="3_v8som"]
+[ext_resource type="PackedScene" uid="uid://c5swxwyedgbqu" path="res://scenes/ui/hud/hud.tscn" id="4_d8cai"]
+[ext_resource type="AudioStream" uid="uid://chi0fhyrf64f7" path="res://assets/sounds/music/menu.ogg" id="5_clko2"]
+[ext_resource type="PackedScene" uid="uid://bn283rlr3v6l0" path="res://scenes/ui/dialog_player/dialog_player.tscn" id="6_rext3"]
+[ext_resource type="PackedScene" uid="uid://bqub6adea8qv0" path="res://scenes/ui/animations/transitions.tscn" id="8_2vf1h"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_g0ybv")
+
+[node name="SmallWorld" parent="." instance=ExtResource("2_jukr8")]
+position = Vector2(-8, -8)
+layer_1/tile_data = PackedInt32Array(-7, 65536, 5, -5, 131072, 5, -1, 327680, 5, -65532, 0, 5, -65530, 196608, 5, -65531, 131072, 5, -196604, 458752, 3, 327675, 458752, 3, -2, 393216, 2, 0, 393216, 2, -393223, 65536, 2, -393222, 0, 0, -393221, 0, 0, -393220, 0, 0, -393219, 0, 0, -393218, 0, 0, -393217, 0, 0, -458752, 0, 0, -458751, 0, 0, -458750, 0, 0, -458749, 0, 0, -458748, 0, 0, -458747, 0, 0, -458746, 0, 2, 393222, 0, 3, 458745, 65536, 3, -327687, 0, 1, -262151, 0, 1, -196615, 0, 1, -131079, 0, 1, -65543, 0, 1, 65529, 0, 1, 131065, 0, 1, 196601, 0, 1, 262137, 0, 1, 327673, 0, 1, 393209, 0, 1, -393210, 65536, 1, -327674, 65536, 1, -262138, 65536, 1, -196602, 65536, 1, -131066, 65536, 1, 6, 65536, 1, 65542, 65536, 1, 131078, 65536, 1, 196614, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 393221, 65536, 0, 393220, 65536, 0, 393219, 65536, 0, 393218, 65536, 0, 393217, 65536, 0, 393216, 65536, 0, 458751, 65536, 0, 458750, 65536, 0, 458749, 65536, 0, 458748, 65536, 0, 458747, 65536, 0, 458746, 65536, 0, -262149, 262144, 1, -262142, 196608, 1, 196611, 196608, 0, 327676, 131072, 1, 327685, 262144, 0, 65540, 327680, 0, 327682, 262144, 1, 196605, 262144, 1, -327682, 131072, 0, -196606, 393216, 1, -327677, 262144, 2, 262149, 131072, 4, 262148, 131072, 4, 131070, 1, 262144)
+
+[node name="Farm" parent="." instance=ExtResource("2_hcv60")]
+layer_0/tile_data = PackedInt32Array(131054, 0, 65536, 65509, 0, 65536, 131045, 0, 65536, 196581, 0, 65536, 262117, 0, 65536, 327653, 0, 65536, 393189, 0, 65536, 458725, 0, 65536, 524261, 0, 65536, 589797, 0, 65536, 655333, 0, 65536, 65510, 0, 65536, 131046, 0, 65536, 196582, 0, 65536, 262118, 0, 65536, 327654, 0, 65536, 393190, 0, 65536, 458726, 0, 65536, 524262, 0, 65536, 589798, 0, 65536, 655334, 0, 65536, 65511, 0, 65536, 131047, 0, 65536, 196583, 0, 65536, 262119, 0, 65536, 327655, 0, 65536, 393191, 0, 65536, 458727, 0, 65536, 524263, 0, 65536, 589799, 0, 65536, 655335, 0, 65536, 65512, 0, 65536, 131048, 0, 65536, 196584, 0, 65536, 262120, 0, 65536, 327656, 0, 65536, 393192, 0, 65536, 458728, 0, 65536, 524264, 0, 65536, 589800, 0, 65536, 655336, 0, 65536, 65513, 0, 65536, 131049, 0, 65536, 196585, 0, 65536, 262121, 0, 65536, 327657, 0, 65536, 393193, 0, 65536, 458729, 0, 65536, 524265, 0, 65536, 589801, 0, 65536, 655337, 0, 65536, 65514, 0, 65536, 131050, 0, 65536, 196586, 0, 65536, 262122, 0, 65536, 327658, 0, 65536, 393194, 0, 65536, 458730, 0, 65536, 524266, 0, 65536, 589802, 0, 65536, 655338, 0, 65536, 65515, 0, 65536, 131051, 0, 65536, 196587, 0, 65536, 262123, 0, 65536, 327659, 0, 65536, 393195, 0, 65536, 458731, 0, 65536, 524267, 0, 65536, 589803, 0, 65536, 655339, 0, 65536, 65516, 0, 65536, 131052, 0, 65536, 196588, 0, 65536, 262124, 0, 65536, 327660, 0, 65536, 393196, 0, 65536, 458732, 0, 65536, 524268, 0, 65536, 589804, 0, 65536, 655340, 0, 65536, 65517, 0, 65536, 131053, 0, 65536, 196589, 0, 65536, 262125, 0, 65536, 327661, 0, 65536, 393197, 0, 65536, 458733, 0, 65536, 524269, 0, 65536, 589805, 0, 65536, 655341, 0, 65536, 65518, 0, 65536, 196590, 0, 65536, 262126, 0, 65536, 327662, 0, 65536, 393198, 0, 65536, 458734, 0, 65536, 524270, 0, 65536, 589806, 0, 65536, 655342, 0, 65536, 65519, 0, 65536, 131055, 0, 65536, 196591, 0, 65536, 262127, 0, 65536, 327663, 0, 65536, 393199, 0, 65536, 458735, 0, 65536, 524271, 0, 65536, 589807, 0, 65536, 655343, 0, 65536, 65520, 0, 65536, 131056, 0, 65536, 196592, 0, 65536, 262128, 0, 65536, 327664, 0, 65536, 393200, 0, 65536, 458736, 0, 65536, 524272, 0, 65536, 589808, 0, 65536, 655344, 0, 65536)
+
+[node name="Player" parent="." instance=ExtResource("3_v8som")]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("4_d8cai")]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("5_clko2")
+
+[node name="DialogPlayer" parent="." instance=ExtResource("6_rext3")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transitions" parent="CanvasLayer" instance=ExtResource("8_2vf1h")]
+
+[connection signal="body_entered" from="SmallWorld/Bed" to="SmallWorld/Bed" method="_on_body_entered"]
+[connection signal="body_exited" from="SmallWorld/Bed" to="SmallWorld/Bed" method="_on_body_exited"]
+[connection signal="area_entered" from="SmallWorld/Sign1" to="SmallWorld/Sign1" method="_on_area_entered"]
+[connection signal="area_exited" from="SmallWorld/Sign1" to="SmallWorld/Sign1" method="_on_area_exited"]
+[connection signal="area_entered" from="SmallWorld/DialogArea" to="SmallWorld/DialogArea" method="_on_area_entered"]
+[connection signal="area_exited" from="SmallWorld/DialogArea" to="SmallWorld/DialogArea" method="_on_area_exited"]
+[connection signal="start_game" from="HUD" to="." method="new_game"]

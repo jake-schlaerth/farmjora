@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=4 format=3 uid="uid://cyum7uj36bb5b"]
+
+[ext_resource type="Resource" uid="uid://1tdidfu0bppp" path="res://scenes/plants/carrot.tres" id="1_d2pka"]
+[ext_resource type="Script" path="res://scenes/inventory/inventory_items/inventory_item.gd" id="1_o1mm4"]
+[ext_resource type="Texture2D" uid="uid://cm8v44b4aan7w" path="res://assets/sprites/inventory/items/carrot_seeds.png" id="2_nbnrt"]
+
+[resource]
+script = ExtResource("1_o1mm4")
+name = "carrot_seeds"
+texture = ExtResource("2_nbnrt")
+equipable = true
+type = 0
+plant = ExtResource("1_d2pka")

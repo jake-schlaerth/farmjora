@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://btwsmtup2cjoq"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_g0ybv"]
+[ext_resource type="PackedScene" uid="uid://crc0a6w021fcv" path="res://scenes/player/player.tscn" id="3_v8som"]
+[ext_resource type="PackedScene" uid="uid://c5swxwyedgbqu" path="res://scenes/ui/hud/hud.tscn" id="4_d8cai"]
+[ext_resource type="AudioStream" uid="uid://chi0fhyrf64f7" path="res://assets/sounds/music/menu.ogg" id="5_clko2"]
+[ext_resource type="PackedScene" uid="uid://bn283rlr3v6l0" path="res://scenes/ui/dialog_player/dialog_player.tscn" id="6_rext3"]
+[ext_resource type="PackedScene" uid="uid://bqub6adea8qv0" path="res://scenes/ui/animations/transitions.tscn" id="8_2vf1h"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_g0ybv")
+
+[node name="MapContainer" type="Node2D" parent="."]
+process_mode = 3
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transitions" parent="CanvasLayer" instance=ExtResource("8_2vf1h")]
+
+[node name="Player" parent="." instance=ExtResource("3_v8som")]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("4_d8cai")]
+
+[node name="DialogPlayer" parent="." instance=ExtResource("6_rext3")]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("5_clko2")
+
+[connection signal="start_game" from="HUD" to="." method="new_game"]

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Carrot" load_steps=2 format=3 uid="uid://1tdidfu0bppp"]
+
+[ext_resource type="Script" path="res://scenes/plants/carrot.gd" id="1_fs4si"]
+
+[resource]
+script = ExtResource("1_fs4si")

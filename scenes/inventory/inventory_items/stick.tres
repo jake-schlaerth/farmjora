@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://tw5hdqhd2k8f"]
+
+[ext_resource type="Script" path="res://scenes/inventory/inventory_items/inventory_item.gd" id="1_15hwf"]
+[ext_resource type="Texture2D" uid="uid://d3o887oxgngxk" path="res://assets/sprites/inventory/items/stick.png" id="2_wh0bh"]
+
+[resource]
+script = ExtResource("1_15hwf")
+name = "stick"
+texture = ExtResource("2_wh0bh")
+equipable = false
+type = 2

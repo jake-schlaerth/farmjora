@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpjrq644s557a"]
+
+[ext_resource type="Script" path="res://scenes/maps/collectables/collectable.gd" id="1_22gve"]
+[ext_resource type="Resource" uid="uid://tw5hdqhd2k8f" path="res://scenes/inventory/inventory_items/stick.tres" id="2_1o8ui"]
+[ext_resource type="Texture2D" uid="uid://d3o887oxgngxk" path="res://assets/sprites/inventory/items/stick.png" id="3_w7okd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6wmc7"]
+radius = 22.0
+
+[node name="Collectable" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_22gve")
+inventory_item = ExtResource("2_1o8ui")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_w7okd")
+
+[node name="pickup_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickup_area"]
+shape = SubResource("CircleShape2D_6wmc7")
+
+[connection signal="body_entered" from="pickup_area" to="." method="_on_pickup_area_body_entered"]

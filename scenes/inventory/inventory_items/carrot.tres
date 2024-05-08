@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://xmc5rmgy615c"]
+
+[ext_resource type="Script" path="res://scenes/inventory/inventory_items/inventory_item.gd" id="1_5qtl8"]
+[ext_resource type="Texture2D" uid="uid://udte5saw1nin" path="res://assets/sprites/inventory/items/carrot.png" id="2_ecqxd"]
+
+[resource]
+script = ExtResource("1_5qtl8")
+name = "carrot"
+texture = ExtResource("2_ecqxd")
+equipable = false
+type = 0

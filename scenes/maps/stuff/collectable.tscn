@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpjrq644s557a"]
+
+[ext_resource type="Script" path="res://scenes/maps/stuff/collectable.gd" id="1_jswo5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6wmc7"]
+radius = 22.0
+
+[node name="Collectable" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_jswo5")
+
+[node name="Image" type="Sprite2D" parent="."]
+
+[node name="pickup_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickup_area"]
+shape = SubResource("CircleShape2D_6wmc7")
+
+[connection signal="body_entered" from="pickup_area" to="." method="_on_pickup_area_body_entered"]

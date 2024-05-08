@@ -9,7 +9,6 @@ func _ready() -> void:
 func on_increment_day() -> void:
 	current_day += 1
 	total_days_passed += 1
-	
 
 func get_current_day() -> int:
 	return current_day

@@ -4,3 +4,6 @@
 
 [resource]
 script = ExtResource("1_fs4si")
+name = "carrot"
+day_planted = 0
+days_to_grow = 3

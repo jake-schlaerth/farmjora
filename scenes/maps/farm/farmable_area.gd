@@ -12,7 +12,10 @@ var area_active := false
 enum TILE_STATE {UNTILLED, TILLED, PLANTED}
 
 var plants := {
-	'carrot': load("res://scenes/plants/carrot.tres")
+	"carrot": {
+		"plant_resource": load("res://scenes/plants/carrot.tres"),
+		"inventory_resource": load("res://scenes/inventory/inventory_items/carrot.tres")
+	}
 }
 
 func _ready() -> void:
@@ -22,7 +25,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if area_active and event.is_action_pressed("ui_accept"):
-		pass
+		harvest_plant()
 
 func on_use_equipped_inventory_item(inventory_item: InventoryItem) -> void:
 	if inventory_item.name == 'hoe':
@@ -57,7 +60,10 @@ func plant_seed(inventory_seed: InventoryItem) -> void:
 	signal_bus.decrement_item_quantity.emit(inventory_seed.name)
 
 func get_plant_resource(inventory_seed: InventoryItem) -> Plant:
-	return plants[inventory_seed.plant.name]
+	return plants[inventory_seed.plant.name].plant_resource
+
+func get_plant_inventory_item() -> InventoryItem:
+	return plants[plant.name].inventory_resource
 
 func tile_is_tilled() -> bool:
 	return state == TILE_STATE.TILLED
@@ -65,6 +71,15 @@ func tile_is_tilled() -> bool:
 func update_visibility() -> void:
 	images.visible = state != TILE_STATE.UNTILLED
 	plant_image.visible = state == TILE_STATE.PLANTED
+
+func harvest_plant() -> void:
+	if state == TILE_STATE.PLANTED && plant.is_harvestable():
+		player_manager.get_player().collect(get_plant_inventory_item())
+		reset()
+
+func reset() -> void:
+	state = TILE_STATE.TILLED
+	update_visibility()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group('player'):

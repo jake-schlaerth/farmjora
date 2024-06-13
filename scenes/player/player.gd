@@ -7,6 +7,7 @@ signal hit
 
 var has_equipped_inventory_item := false
 var last_direction := Vector2(0, 1)
+var current_direction:= Vector2.ZERO
 var control_enabled := false
 var mouse_button_held := false
 var inventory_slot_quantity := 12
@@ -23,21 +24,21 @@ func _process(_delta: float) -> void:
 
 func _physics_process(_delta: float) -> void:
 	if not control_enabled:
-		$AnimatedSprite2D.stop()
-		$AnimatedSprite2D.animation = get_still_animation_name(last_direction)
+		$PlayerSprite.stop()
+		$PlayerSprite.animation = get_still_animation_name(last_direction)
 		return
 		
 	velocity = Vector2.ZERO
-	var current_direction := Vector2.ZERO
+	current_direction = Vector2.ZERO
 
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
 		current_direction = Vector2(1, 0)
-		$AnimatedSprite2D.flip_h = true
+		$PlayerSprite.flip_h = true
 	elif Input.is_action_pressed("move_left"):
 		velocity.x -= 1
 		current_direction = Vector2(-1, 0)
-		$AnimatedSprite2D.flip_h = false
+		$PlayerSprite.flip_h = false
 
 	if Input.is_action_pressed("move_down"):
 		velocity.y += 1
@@ -48,16 +49,18 @@ func _physics_process(_delta: float) -> void:
 
 	if current_direction != Vector2.ZERO:
 		last_direction = current_direction
-		$AnimatedSprite2D.animation = get_moving_animation_name(last_direction)
-		$AnimatedSprite2D.play()
+		$PlayerSprite.animation = get_moving_animation_name(last_direction)
+		$PlayerSprite.play()
 	else:
-		$AnimatedSprite2D.stop()
-		$AnimatedSprite2D.animation = get_still_animation_name(last_direction)
+		$PlayerSprite.stop()
+		$PlayerSprite.animation = get_still_animation_name(last_direction)
 
 	velocity = velocity.normalized() * speed
 	move_and_slide()
 
 func _input(event: InputEvent) -> void:
+	if not control_enabled:
+		return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		mouse_button_held = event.pressed
 

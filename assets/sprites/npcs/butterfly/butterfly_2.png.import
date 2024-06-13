@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfe4calu5hlte"
-path="res://.godot/imported/player_down_still.png-5edda4e8c89df3555296058af5cba679.ctex"
+uid="uid://dc0d3uw4ouom5"
+path="res://.godot/imported/butterfly_2.png-b57fe5340fe445b907ae3378701e72b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixelorama/player/player_down_still.png"
-dest_files=["res://.godot/imported/player_down_still.png-5edda4e8c89df3555296058af5cba679.ctex"]
+source_file="res://assets/sprites/npcs/butterfly/butterfly_2.png"
+dest_files=["res://.godot/imported/butterfly_2.png-b57fe5340fe445b907ae3378701e72b3.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf0vqchdjmc4p"
-path="res://.godot/imported/player_left_1.png-560e389088a293bcb5dfbb1c4b0f6c10.ctex"
+uid="uid://d4f07toeatw0b"
+path="res://.godot/imported/bird_1.png-656b7033298e62112cc0f602629f85c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixelorama/player/player_left_1.png"
-dest_files=["res://.godot/imported/player_left_1.png-560e389088a293bcb5dfbb1c4b0f6c10.ctex"]
+source_file="res://assets/sprites/npcs/bird/bird_1.png"
+dest_files=["res://.godot/imported/bird_1.png-656b7033298e62112cc0f602629f85c0.ctex"]
 
 [params]
 

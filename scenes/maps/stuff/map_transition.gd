@@ -5,4 +5,4 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group('player'):
-		signal_bus.change_map.emit(new_map_name, enter_position)
+		signal_bus.change_map.emit(new_map_name, enter_position, [])

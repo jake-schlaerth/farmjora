@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://d3ns0o61e7r7e"]
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://d3ns0o61e7r7e"]
 
 [ext_resource type="Texture2D" uid="uid://cgnqi6ap06lhm" path="res://assets/sprites/tile_sheets/spring_tilesheet_small.png" id="1_1ec3h"]
 [ext_resource type="PackedScene" uid="uid://cj8dn5vpx0l4h" path="res://scenes/maps/dialog_areas/sign_1.tscn" id="2_rn75s"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://n13tfnutj4c7" path="res://scenes/maps/stuff/bed.tscn" id="5_08d7t"]
 [ext_resource type="PackedScene" uid="uid://dtolqfgdxtw1t" path="res://scenes/maps/stuff/map_transition.tscn" id="6_ua1eg"]
 [ext_resource type="PackedScene" uid="uid://bpw5s24eu5xi0" path="res://scenes/maps/farm/farmable_area.tscn" id="7_j2hyw"]
+[ext_resource type="Texture2D" uid="uid://0bxl7yb6041v" path="res://assets/sprites/tile_sheets/building_tilesheet.png" id="8_p8ybs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gvy4d"]
 texture = ExtResource("1_1ec3h")
@@ -149,8 +150,30 @@ scenes/5/scene = ExtResource("6_ua1eg")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_w46i4"]
 scenes/1/scene = ExtResource("7_j2hyw")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q8bqx"]
+texture = ExtResource("8_p8ybs")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_gvy4d")
 sources/1 = SubResource("TileSetScenesCollectionSource_23lop")
 sources/3 = SubResource("TileSetScenesCollectionSource_w46i4")
+sources/5 = SubResource("TileSetAtlasSource_q8bqx")

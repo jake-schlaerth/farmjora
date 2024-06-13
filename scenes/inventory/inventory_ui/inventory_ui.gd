@@ -30,9 +30,11 @@ func close() -> void:
 	get_tree().paused = false
 	is_open = false
 	visible = false
+	get_tree().paused = false
 	
 func open() -> void:
 	player_manager.get_player().control_enabled = false
 	get_tree().paused = true
 	visible = true
 	is_open = true
+	get_tree().paused = true

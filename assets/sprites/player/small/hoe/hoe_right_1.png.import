@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bourj4deetcf2"
-path="res://.godot/imported/player_up_still.png-61af756711d2dfc7bebef2ec2306dd2f.ctex"
+uid="uid://ba8enhlghd02"
+path="res://.godot/imported/hoe_right_1.png-ff31af9f094ea9c9687df758b5c9063e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixelorama/player/player_up_still.png"
-dest_files=["res://.godot/imported/player_up_still.png-61af756711d2dfc7bebef2ec2306dd2f.ctex"]
+source_file="res://assets/sprites/player/small/hoe/hoe_right_1.png"
+dest_files=["res://.godot/imported/hoe_right_1.png-ff31af9f094ea9c9687df758b5c9063e.ctex"]
 
 [params]
 

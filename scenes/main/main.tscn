@@ -19,9 +19,13 @@ process_mode = 3
 [node name="StartPosition" type="Marker2D" parent="."]
 
 [node name="HUD" parent="." instance=ExtResource("4_d8cai")]
+process_mode = 3
 
 [node name="DialogPlayer" parent="." instance=ExtResource("6_rext3")]
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("5_hfqde")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(8, 8)
